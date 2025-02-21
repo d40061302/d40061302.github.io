@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta cahrset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+ intial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Proyect-David-Jimenez</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="top-container">
+            <a class="brand" href="index.html">FindYour3dModel</a>
+            <div class="navigation-container">
+                <a class="navigation-btn" href="index.html">Home</a>
+                <a class="navigation-btn" href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="card-container">
+
+
+
+            <div class="cards">
+                <img src="images/Sparks.png" alt="mini-road scenario" class="image2">
+                <div class="card-content">
+                    <h2>Mini Road Scenario</h2>
+                    <p>This is a 3D model of a road lonely road in the middle of the night</p>
+
+                </div>
+            </div>
+
+            <div class="cards">
+                <img src="images/Layve4.png" alt="diesel punk" class="image3">
+                <div class="card-content">
+                    <h2>Layve</h2>
+                    <p>This is a 3D model of a character ready to animate</p>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="cards">
+                <img src="images/Camaro_LowPoly3.png" alt="automobile chevrolet camaro" class="image4">
+                <div class="card-content">
+                    <h2>Chevrolet camaro car</h2>
+                    <p>This is a 3D model of a car ready to use in your animations</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr style="width:100%;text-align:center;margin-left:0">
+
+
+
+
+        <!-- about me -->
+
+        <div class="gif">
+            <img class="gif-aboutme" src="images/about-me.gif">
+        </div>
+
+
+        <div class="aboutme-section">
+            <div class="myphoto-container">
+                <img class=myphoto src="images/myphoto.jpeg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="about-me">
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent
+            ('content-achievements')">
+                    <div class="image-collapsible">
+                        <img src="images/achievements.svg" alt="">
+                    </div>
+                    <span class="collapsible-text">Achievements</span>
+                </div>
+                <div id="content-achievements" class="content hidden">
+                    <span>I have a technique diploma in digital animation and visual effects, I have been learning and
+                        mastering English for 2
+                        years.</span>
+                </div>
+            </div>
+
+
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent
+                    ('content-hobbiest')">
+                    <div class="image-collapsible">
+                        <img src="images/hobbiest.svg" alt="">
+                    </div>
+                    <span class="collapsible-text">Hobbiest</span>
+                </div>
+                <div id="content-hobbiest" class="content hidden">
+                    <span>I like reading books, designing, learning new things, watching anime, making 3d models. I like
+                        to workout very often at the gym and running once a week in the morning. I'm a foodie person.
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent
+                        ('content-myjob')">
+                    <div class="image-collapsible">
+                        <img src="images/job.svg" alt="">
+                    </div>
+                    <span class="collapsible-text">My Job</span>
+                </div>
+                <div id="content-myjob" class="content hidden">
+                    <span>My current job is in a Pharmacy, my position is being a cashier and I have another
+                        administrative tasks. I'm looking forward in a future to move to the publicity field. With my
+                        creativity and professional skills, I bet that I can be a remarkable option.</span>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- form -->
+
+        <hr style="width:100%;text-align:center;margin-left:0">
+
+
+        <div class="form">
+
+
+            <form class="form-sub">
+                <div class="title">
+                    <span>Contact us</span>
+                </div>
+
+                <input type="text" name="name" id="name" required placeholder="Name:">
+
+                <input type="email" name="email" id="email" required placeholder="Email:">
+
+                <textarea name="message" id="message" required placeholder="Add your comment"></textarea>
+
+                <div class="button">Send</div>
+            </form>
+
+
+
+        </div>
+
+        <div class="footer">
+            <p class="right">&copy; 2025 FindYour3dModel. All rights reserved.</p>
+            <p>
+                <a class="navigation-btn-footer" href="index.html">Home</a>
+            </p>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+    <script>
+        function showContent(type) {
+            var content = document.getElementById(type);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
