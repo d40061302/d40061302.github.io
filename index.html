@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta cahrset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,
  intial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,6 +189,16 @@
 
     <script>
         function showContent(type) {
+
+            var contentMyjob = document.getElementById('content-myjob');
+            var contentHobbiest = document.getElementById('content-hobbiest');
+            var contentAchievements = document.getElementById('content-achievements');
+
+            contentMyjob.classList.add('hidden');
+            contentHobbiest.classList.add('hidden');
+            contentAchievements.classList.add('hidden');
+
+
             var content = document.getElementById(type);
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
