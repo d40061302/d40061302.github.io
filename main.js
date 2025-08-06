@@ -115,6 +115,14 @@ document.getElementById('lightbox-img').addEventListener('dblclick', function ()
     }
 });
 
+// auto-recenter buttons
+
+window.addEventListener("resize", () => {
+    document.querySelectorAll("#prev-btn, #next-btn").forEach(btn => {
+        btn.style.display = "block";
+    });
+});
+
 // Pan when zoomed
 document.getElementById('lightbox-img').addEventListener('mousedown', function (e) {
     if (!zoomed) return;
