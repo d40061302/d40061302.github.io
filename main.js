@@ -115,8 +115,6 @@ document.getElementById('lightbox-img').addEventListener('dblclick', function ()
     }
 });
 
-// auto-recenter buttons
-
 
 // Pan when zoomed
 document.getElementById('lightbox-img').addEventListener('mousedown', function (e) {
