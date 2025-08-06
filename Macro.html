@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+ intial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mr.PhotoBook</title>
+
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="brand" href="Mr.PhotoBook.html">Mr.PhotoBook</a>
+        <div class="navigation-container">
+            <a class="navigation-btn" href=""><img src=""></a>
+            <button class="btnContact" id="btnContact">Contact</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Contact Info</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Send me an email!
+                        </p>
+                        <a href="mailto:d40061302@gmail.com">d40061302@gmail.com</a>
+                        <p>
+                            Page owner: David Jimenez
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <body-font>Mr.PhotoBook</body-font>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="main-container">
+
+
+
+
+
+
+
+        <h3>Macro</h3>
+
+        <div class="gallery" onclick="openLightbox(event)">
+
+            <img src="photos/Macro/20210518_180930000_iOS.jpg" alt="image 1">
+
+            <img src="photos/Macro/20210610_183313000_iOS.jpg" alt="image 2">
+
+            <img src="photos/Macro/DSCN5578.jpg" alt="image 3">
+
+            <img src="photos/Macro/DSCN5617.jpg" alt="image 4">
+
+            <img src="photos/Macro/DSCN5722.jpg" alt="image 5">
+
+            <img src="photos/Macro/DSCN5728.jpg" alt="image 6">
+
+            <img src="photos/Macro/DSCN5747.jpg" alt="image 7">
+
+            <img src="photos/Macro/DSCN5750.jpg" alt="image 8">
+
+            <img src="photos/Macro/DSCN5752.jpg" alt="image 9">
+
+            <img src="photos/Macro/DSCN5759.jpg" alt="image 10">
+
+            <img src="photos/Macro/DSCN5768.jpg" alt="image 11">
+
+            <img src="photos/Macro/DSCN5769.jpg" alt="image 12">
+
+            <img src="photos/Macro/DSCN5775.jpg" alt="image 13">
+
+            <img src="photos/Macro/DSCN5787.jpg" alt="image 14">
+
+            <img src="photos/Macro/DSCN6144.jpg" alt="image 15">
+
+            <img src="photos/Macro/DSCN9551.jpg" alt="image 16">
+
+            <img src="photos/Macro/DSCN9568.jpg" alt="image 17">
+
+            <img src="photos/Macro/DSCN9570.jpg" alt="image 18">
+
+
+
+        </div>
+
+
+        <!--Lightbox container-->
+        <div id="lightbox">
+            <span id="close-btn" onclick="closeLightbox()">✖</span>
+            <button id="prev-btn" onclick="changeImage(-1)">←</button>
+            <img id="lightbox-img" />
+            <button id="next-btn" onclick="changeImage(1)">→</button>
+            <div id="thumbnail-container" class="thumbnail-container"></div>
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.instagram.com/david_jmz173/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.behance.net/davidjimenez162"><i class="fa fa-behance"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <button class="btnContactFooter" id="btnContactFooter">Contact Me</button>
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h3>Contact Info</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Send me an email!
+                                </p>
+                                <a href="mailto:d40061302@gmail.com">d40061302@gmail.com</a>
+                                <p>
+                                    Page owner: David Jimenez
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <body-font>Mr.PhotoBook</body-font>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li><a href="TermsAndConditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                MR.PHOTOBOOK Copyright © 2021 Mr.PhotoBook - All rights reserved || Designed By: David Jiménez
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="main.js"></script>
+
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+ intial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mr.PhotoBook</title>
+
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="brand" href="Mr.PhotoBook.html">Mr.PhotoBook</a>
+        <div class="navigation-container">
+            <a class="navigation-btn" href=""><img src=""></a>
+            <button class="btnContact" id="btnContact">Contact</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Contact Info</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Send me an email!
+                        </p>
+                        <a href="mailto:d40061302@gmail.com">d40061302@gmail.com</a>
+                        <p>
+                            Page owner: David Jimenez
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <body-font>Mr.PhotoBook</body-font>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="main-container">
+
+
+
+
+        <h3>By categories</h3>
+        <div class="carousel">
+            <div class="categories-card-container">
+                <a href="Landscapes.html" class="card-link">
+                    <div class="cards">
+                        <img src="photos/Landscapes/f67655936.jpg" alt="sunset with blur" class="landscapes">
+
+                        <div class="card-content">
+                            <h2>Landscapes</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Macro.html" class="card-link">
+                    <div class="cards">
+                        <img src="photos/Macro/DSCN5787.jpg" alt="Bug on a plant" class="landscapes">
+
+                        <div class="card-content">
+                            <h2>Macro</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Flora.html" class="card-link">
+                    <div class="cards">
+                        <img src="photos/Vegetation & Flowers/DSCN9527.jpg" alt="Flower" class="landscapes">
+
+                        <div class="card-content">
+                            <h2>Flora</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Fauna.html" class="card-link">
+                    <div class="cards">
+                        <img src="photos/Animals & Wildlife/DSC01032.jpg" alt="monkey" class="landscapes">
+
+                        <div class="card-content">
+                            <h2>Fauna</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="SomePortraits.html" class="card-link">
+                    <div class="cards">
+                        <img src="photos/Some Portraits/DSCN9314.jpg" alt="Pirate with a treasure" class="landscapes">
+
+                        <div class="card-content">
+                            <h2>Some Portraits</h2>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+
+        <hr class="solid">
+
+        <h3>My Favorites</h3>
+
+        <div class="gallery" onclick="openLightbox(event)">
+
+            <img src="photos/My favorites/DSCN9568.jpg" alt="image 1">
+
+            <img src="photos/My favorites/DSCN9150.jpg" alt="image 2">
+
+            <img src="photos/My favorites/DSCN6908.jpg" alt="image 3">
+
+            <img src="photos/My favorites/DSCN6275.jpg" alt="image 4">
+
+            <img src="photos/My favorites/DSCN5768.jpg" alt="image 5">
+
+            <img src="photos/My favorites/DSCN5747.jpg" alt="image 6">
+
+            <img src="photos/My favorites/DSC01199.JPG" alt="image 7">
+
+            <img src="photos/My favorites/DSC01034.jpg" alt="image 8">
+
+            <img src="photos/My favorites/DSC00994.jpg" alt="image 9">
+
+            <img src="photos/My favorites/DSC00861.jpg" alt="image 10">
+
+            <img src="photos/My favorites/DSC00803.JPG" alt="image 11">
+
+            <img src="photos/My favorites/8604488166a935c5c21642495f7089dd.jpg" alt="image 12">
+
+            <img src="photos/My favorites/20210611_170949000_iOS.jpg" alt="image 12">
+
+            <img src="photos/My favorites/20210610_183313000_iOS.jpg" alt="image 13">
+
+
+
+
+        </div>
+
+        <!--Lightbox container-->
+        <div id="lightbox">
+            <span id="close-btn" onclick="closeLightbox()">✖</span>
+            <button id="prev-btn" onclick="changeImage(-1)">←</button>
+            <img id="lightbox-img" />
+            <button id="next-btn" onclick="changeImage(1)">→</button>
+            <div id="thumbnail-container" class="thumbnail-container"></div>
+        </div>
+
+        <hr class="solid">
+
+        <img src="photos/20240424_184406000_iOS.jpg" alt="Photo of the owner" class="about-me-image">
+
+        <div class="about-me">
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent('content-aboutme')">
+                    <div class="image-collapsible">
+                        <img src="" alt="">
+                    </div>
+                    <span class="collapsible-text">About me
+
+                    </span>
+                </div>
+                <div id="content-aboutme" class="content hidden">
+                    <span>My current job is in a Pharmacy, my position is being a cashier and I have another
+                        administrative tasks. I'm looking forward in a future to move to the publicity field. With
+                        my
+                        creativity and professional skills, I bet that I can be a remarkable option.</span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.instagram.com/david_jmz173/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.behance.net/davidjimenez162"><i class="fa fa-behance"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <button class="btnContactFooter" id="btnContactFooter">Contact Me</button>
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h3>Contact Info</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Send me an email!
+                                </p>
+                                <a href="mailto:d40061302@gmail.com">d40061302@gmail.com</a>
+                                <p>
+                                    Page owner: David Jimenez
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <body-font>Mr.PhotoBook</body-font>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li><a href="TermsAndConditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                MR.PHOTOBOOK Copyright © 2025 Mr.PhotoBook - All rights reserved || Designed By: David Jiménez
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</html>
