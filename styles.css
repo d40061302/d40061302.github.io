@@ -240,7 +240,7 @@ h3 {
 
 /* Lightbox styles */
 #lightbox {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -252,6 +252,7 @@ h3 {
     flex-direction: column;
     z-index: 1000;
     padding: 40px 10px 20px 10px;
+    overflow: hidden;
 
 
     box-sizing: border-box;
