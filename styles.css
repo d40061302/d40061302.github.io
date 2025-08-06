@@ -56,6 +56,12 @@ body {
     font-style: normal;
 }
 
+@media (max-width: 380px) {
+    .cards {
+        font-size: 20px;
+    }
+}
+
 .navigation-btn-contact {
     margin-right: 24px;
     font-size: 20px;
