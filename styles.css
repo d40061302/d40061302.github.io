@@ -129,7 +129,6 @@ hr.solid {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1000;
 }
 
 .back-button img {
@@ -211,6 +210,7 @@ hr.solid {
 #lightbox {
     display: none;
     position: fixed;
+    inset: 0;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -218,7 +218,6 @@ hr.solid {
     height: 100%;
     padding: 48px 12px 20px;
     background: rgba(0, 0, 0, 0.8);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
