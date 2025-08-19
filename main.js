@@ -1,3 +1,7 @@
+// ==================================================
+// Lightbox
+// ==================================================
+
 let currentIndex = 0;
 const images = document.querySelectorAll('.gallery img');
 const totalImages = images.length;
@@ -8,15 +12,17 @@ function openLightbox(event) {
         currentIndex = Array.from(images).indexOf(event.target);
         updateLightboxImage();
         document.getElementById('lightbox').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     }
 }
 
 // Close the lightbox
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
 }
 
-// Change the lightbox image based on direction
+// Change the lightbox image
 function changeImage(direction) {
     currentIndex += direction;
     if (currentIndex >= totalImages) {
@@ -27,41 +33,48 @@ function changeImage(direction) {
     updateLightboxImage();
 }
 
-// Update the lightbox image and thumbnails
+// Update the lightbox image + thumbnails
 function updateLightboxImage() {
     const lightboxImg = document.getElementById('lightbox-img');
     const thumbnailContainer = document.getElementById('thumbnail-container');
 
-    // Update the main lightbox image
+    // Main image
     lightboxImg.src = images[currentIndex].src;
 
-    // Clear existing thumbnails
+    // Clear thumbnails
     thumbnailContainer.innerHTML = '';
 
-    // Add new thumbnails
+    // Add thumbnails
     images.forEach((image, index) => {
         const thumbnail = document.createElement('img');
         thumbnail.src = image.src;
         thumbnail.alt = `Thumbnail ${index + 1}`;
         thumbnail.classList.add('thumbnail');
+
         if (index === currentIndex) {
             thumbnail.classList.add('active-thumbnail');
         }
+
         thumbnail.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent background click from firing
+            event.stopPropagation();
             updateMainImage(index);
         });
 
         thumbnailContainer.appendChild(thumbnail);
+
         if (index === currentIndex) {
             setTimeout(() => {
-                thumbnail.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                thumbnail.scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'center',
+                    block: 'nearest'
+                });
             }, 0);
         }
     });
 }
 
-// Update the main lightbox image when a thumbnail is clicked
+// Update main image when thumbnail clicked
 function updateMainImage(index) {
     currentIndex = index;
     updateLightboxImage();
@@ -84,7 +97,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// Close lightbox when clicking outside the image
+// Close lightbox when clicking outside
 document.getElementById('lightbox').addEventListener('click', function (event) {
     const lightboxImg = document.getElementById('lightbox-img');
     const isClickInsideImage = lightboxImg.contains(event.target);
@@ -94,6 +107,10 @@ document.getElementById('lightbox').addEventListener('click', function (event) {
         closeLightbox();
     }
 });
+
+// ==================================================
+// Zoom + Pan
+// ==================================================
 
 let zoomed = false;
 let startX, startY;
@@ -114,7 +131,6 @@ document.getElementById('lightbox-img').addEventListener('dblclick', function ()
         img.style.transform = 'scale(1)';
     }
 });
-
 
 // Pan when zoomed
 document.getElementById('lightbox-img').addEventListener('mousedown', function (e) {
@@ -147,15 +163,14 @@ document.getElementById('lightbox-img').addEventListener('mousedown', function (
     window.addEventListener('mouseup', onMouseUp);
 });
 
+// ==================================================
+// Collapsibles
+// ==================================================
 
-//Code for collapsables
+// (first version)
 function showContent(type) {
-
     var contentAboutMe = document.getElementById('content-aboutme');
-
-
     contentAboutMe.classList.add('hidden');
-
 
     var content = document.getElementById(type);
     if (content.classList.contains('hidden')) {
@@ -165,68 +180,46 @@ function showContent(type) {
     }
 }
 
+// (second version)
 function showContent(type) {
     var content = document.getElementById(type);
     content.classList.toggle('hidden');
 }
 
+// ==================================================
+// Modal
+// ==================================================
 
-function openLightbox(event) {
-    if (event.target.tagName === 'IMG') {
-        currentIndex = Array.from(images).indexOf(event.target);
-        updateLightboxImage();
-        document.getElementById('lightbox').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-    document.body.style.overflow = '';
-}
-
-
-//Code for modal
-
+// First modal
 var modal = document.getElementById("myModal");
-
-var btn = document.getElementById("btnContact")
-
+var btn = document.getElementById("btnContact");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
     modal.style.display = "block";
 }
-
 span.onclick = function () {
     modal.style.display = "none";
 }
-
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-
+// Second modal
 var modal = document.getElementById("myModal");
-
-var btn = document.getElementById("btnContactFooter")
-
+var btn = document.getElementById("btnContactFooter");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
     modal.style.display = "block";
 }
-
 span.onclick = function () {
     modal.style.display = "none";
 }
-
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
-
