@@ -16,6 +16,12 @@ h2 {
     margin: 12px 0;
 }
 
+@media (max-width: 969px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
 h3 {
     font-size: 20px;
     font-weight: bold;
@@ -36,6 +42,7 @@ hr.solid {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     margin: 20px 144px;
 }
 
@@ -46,7 +53,7 @@ hr.solid {
     margin: 20px 22%;
 }
 
-@media (max-width: 515px) {
+@media (max-width: 969px) {
     .main-container {
         margin: 20px;
     }
@@ -88,16 +95,27 @@ hr.solid {
 
 /* Categories */
 .categories-card-container {
-    display: flex;
-    align-items: end;
+    color: black;
     width: calc(100% - 16px);
     margin: 8px;
     flex: 0 0 calc(100% - 16px);
     height: 100%;
+    display: flex;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    align-items: end;
 }
+
+
+.carousel {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24;
+}
+
+
 
 /* Cards */
 .card-link {
@@ -108,17 +126,21 @@ hr.solid {
 
 .cards {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    margin: 24px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    height: auto;
+    width: 300px;
+    margin: 24px;
     scroll-snap-align: start;
-    transition: transform .5s;
 }
 
 .back-button {
