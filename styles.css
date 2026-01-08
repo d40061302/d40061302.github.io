@@ -91,6 +91,7 @@ hr.solid {
     font-size: 20px;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Categories */
@@ -224,7 +225,7 @@ hr.solid {
 
 @media (max-width: 950px) {
     .gallery img {
-        border-radius: 5px;
+        border-radius: 8px;
         height: 200px;
     }
 }
@@ -431,7 +432,7 @@ hr.solid {
     width: 100%;
     margin: 1% 0;
     padding: 0.6% 0;
-    color: #8C8C8C;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -446,13 +447,13 @@ hr.solid {
 }
 
 .footer .row a {
-    color: #8C8C8C;
+    color: #fff;
     text-decoration: none;
     transition: 0.5s;
 }
 
 .footer .row a:hover {
-    color: #fff;
+    color: #8C8C8C;
 }
 
 .footer .row a i {
@@ -467,14 +468,14 @@ hr.solid {
     font-family: 'Poppins', sans-serif;
     background: none;
     border: 0;
-    color: #8C8C8C;
+    color: #fff;
     text-decoration: none;
     transition: 0.5s;
 }
 
 .btnContactFooter:hover,
 .btnTerms:hover {
-    color: #fff;
+    color: #8C8C8C;
     cursor: pointer;
 }
 
