@@ -299,6 +299,7 @@ hr.solid {
 #prev-btn {
     left: 12px;
     position: absolute;
+    z-index: 1000;
 }
 
 #next-btn {
