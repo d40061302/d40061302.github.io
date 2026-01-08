@@ -224,7 +224,7 @@ hr.solid {
 
 @media (max-width: 600px) {
     .gallery img {
-        height: 132px;
+        height: 90px;
     }
 }
 
